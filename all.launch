@@ -1,0 +1,15 @@
+<launch>
+
+  <!-- Start roscore -->
+  <node name="roscore" pkg="ros" type="roscore" output="screen"/>
+
+  <!-- Launch camera publisher -->
+  <node name="image_pub" pkg="task2" type="cameraFeed.py" output="screen"/>
+
+  <!-- Launch camera subscriber -->
+  <node name="imgSharpener" pkg="task2" type="sharpimg.py" output="screen"/>
+
+  <!-- Launch RQT Image View -->
+  <node name="rqt_image_view" pkg="rqt_image_view" type="rqt_image_view" output="screen"/>
+
+</launch>
